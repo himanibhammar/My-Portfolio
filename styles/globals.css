@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.makeGapR1 > :not(:last-child) {
+  margin-right: 4px;
+}
+
+.makeGapR7 > :not(:last-child) {
+  margin-right: 1.75rem;
+}
+@keyframes loadingAnimation {
+  0%,
+  20% {
+    color: transparent;
+  }
+  50% {
+    color: #000; /* Change the color as needed */
+  }
+  80%,
+  100% {
+    color: transparent;
+  }
+}
+
+.loader-dots {
+  display: inline-block;
+  font-size: 2em;
+  animation: loadingAnimation 0.75s infinite;
+}

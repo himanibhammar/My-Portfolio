@@ -1,0 +1,43 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@vercel/analytics": "^0.1.5",
+    "aos": "^2.3.4",
+    "clsx": "^1.2.1",
+    "daisyui": "^2.39.1",
+    "framer-motion": "^10.16.16",
+    "lru-cache": "^7.14.1",
+    "next": "^15.0.3",
+    "nodemailer": "^6.9.7",
+    "pdfjs-dist": "^2.15.349",
+    "react": "18.2.0",
+    "react-awesome-reveal": "^4.2.14",
+    "react-dom": "18.2.0",
+    "react-dom-confetti": "^0.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.6.0",
+    "react-intersection-observer": "^9.4.1",
+    "react-reveal": "^1.2.2",
+    "react-typed": "^1.2.0",
+    "s-age": "^1.1.2",
+    "sharp": "^0.33.5",
+    "webhook-discord": "^3.7.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}
