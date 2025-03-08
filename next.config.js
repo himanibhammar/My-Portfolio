@@ -1,15 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // output: 'export',
+  images: {
+    unoptimized: true, // Disable image optimization
+  },
   async redirects() {
     return [];
   },
-};
-
-module.exports = {
-  // experimental: {
-  //   esmExternals: "loose", // Allow loose handling of ES modules
-  // },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.mjs$/,
@@ -19,3 +17,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = nextConfig;
