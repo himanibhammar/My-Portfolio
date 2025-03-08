@@ -1,122 +1,73 @@
 import Image from "next/image";
-
-import { useState, useEffect } from "react";
-import Waypoints from "../dust/waypoints";
-import Fade from "react-reveal/Fade";
 import face from "../../public/img/codeing2.gif";
 
 export default function About() {
-  const [screenWidth, setScreenWidth] = useState(0);
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    setScreenWidth(window.innerWidth);
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
-    <>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        fill="#3fe9ff"
-      >
-        <path
-          fillOpacity={1}
-          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-      <div className="bg-[#3fe9ff] px-6">
-        <Waypoints target={"toabout"}>
-          <div className=""></div>
-
-          <section id="about" className="text-black py-20">
-            <div className="flex flex-col md:flex-row gap-10">
-              <div className="flex justify-center md:mb-0 mb-5 py-5   md:w-screen">
-                <Fade left>
-                  <Image
-                    className="z-50"
-                    src={face}
-                    alt="about me"
-                    width={600}
-                    height={500}
-                  />
-                </Fade>
-              </div>
-
-              <div className="">
-                <h1
-                  className="text-3xl text-center md:text-start font-bold leading-9"
-                  data-aos="fade-up"
-                >
-                  About Me
-                </h1>
-                <div className="flex justify-center md:justify-start">
-                  <div
-                    className="bg-[#6C63FF] w-[150px] h-[5px] "
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                  ></div>
-                </div>
-                {screenWidth >= 640 ? (
-                  <Fade right>
-                    <div className="mt-5 md:text-xl text-justify">
-                      Hey! I&apos;m{" "}
-                      <span className="font-extrabold ">Himani Bhammar</span>, the coding virtuoso and AI adventurer at SRM Institute of Science and Technology. Imagine me diving deep into machine learning algorithms by day and debugging my way through the labyrinth of code by night—all while sipping chai and plotting my next big project.
-                    </div>
-                    <p className="mt-5 md:text-xl text-justify">
-                    In the world of tech, I'm on a mission to unravel the mysteries of AI/ML, crafting smart solutions that bridge innovation and real-world impact. From training deep learning models to tackling algorithmic challenges, every line of code is a step closer to shaping the future.
-
-
-                    </p>
-                    <p className="mt-5 md:text-xl text-justify">
-                    But wait, it's not just about code! Whether it's building AI-driven solutions, crafting intuitive web apps, or exploring the depths of data science, I thrive on transforming challenges into innovations. So gear up—this journey is a fusion of technology, creativity, and relentless curiosity, where every dataset holds a secret, every project is a new quest, and every bug is just a riddle waiting to be solved! 
-                    </p>
-                  </Fade>
-                ) : (
-                  <div className="mt-2 md:text-lg text-justify">
-                    <div className="mt-5 md:text-xl text-justify">
-                      Hey! I&apos;m{" "}
-                      <span className="font-extrabold ">Himani Bhammar</span>, the coding virtuoso and AI adventurer at SRM Institute of Science and Technology. Imagine me diving deep into machine learning algorithms by day and debugging my way through the labyrinth of code by night—all while sipping chai and plotting my next big project.
-                    </div>
-                    <p className="mt-5 md:text-xl text-justify">
-                    In the world of tech, I'm on a mission to unravel the mysteries of AI/ML, crafting smart solutions that bridge innovation and real-world impact. From training deep learning models to tackling algorithmic challenges, every line of code is a step closer to shaping the future.
-
-
-                    </p>
-                    <p className="mt-5 md:text-xl text-justify">
-                    But wait, it's not just about code! Whether it's building AI-driven solutions, crafting intuitive web apps, or exploring the depths of data science, I thrive on transforming challenges into innovations. So gear up—this journey is a fusion of technology, creativity, and relentless curiosity, where every dataset holds a secret, every project is a new quest, and every bug is just a riddle waiting to be solved! 
-                    </p>
-                  </div>
-                )}
+    <section id="about" className="py-16 -mt-10">
+      <div className="container mx-auto px-6 md:px-12">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          
+          {/* Left Side Image with Animation */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-teal-100 rounded-2xl rotate-3 opacity-70"></div>
+              <div className="absolute -inset-4 bg-teal-50 rounded-2xl -rotate-2 opacity-70"></div>
+              <div className="relative">
+                <Image 
+                  src={face} 
+                  alt="Coding Animation" 
+                  width={450} 
+                  height={450} 
+                  className="rounded-xl shadow-lg border-2 border-teal-100"
+                />
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-teal-600 rounded-full opacity-20"></div>
+                <div className="absolute -top-6 -left-6 w-16 h-16 bg-teal-600 rounded-full opacity-20"></div>
               </div>
             </div>
-          </section>
-        </Waypoints>
+          </div>
+          
+          {/* Right Side Content with Enhanced Styling */}
+          <div className="w-full md:w-1/2 bg-white p-8 md:p-10 rounded-xl shadow-lg border border-teal-100 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-teal-50 rounded-full -translate-y-1/2 translate-x-1/2 opacity-60"></div>
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-teal-50 rounded-full translate-y-1/2 -translate-x-1/2 opacity-60"></div>
+            
+            <div className="relative">
+              <h2 className="text-5xl font-bold text-teal-700 mb-8 relative">
+                About Me
+                <div className="absolute h-1 w-24 bg-teal-600 bottom-0 left-0 rounded-full"></div>
+              </h2>
+              
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                Hey! I'm <span className="font-semibold text-teal-700">Himani Bhammar</span>, the coding virtuoso and AI adventurer at SRM Institute of Science and Technology. Imagine me diving deep into machine learning algorithms by day and debugging my way through the labyrinth of code by night—all while sipping chai and plotting my next big project.
+              </p>
+              
+              <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                In the world of tech, I'm on a mission to unravel the mysteries of AI/ML, crafting smart solutions that bridge innovation and real-world impact. From training deep learning models to tackling algorithmic challenges, every line of code is a step closer to shaping the future.
+              </p>
+              
+              <p className="text-xl text-gray-700 leading-relaxed">
+                But wait, it's not just about code! Whether it's building AI-driven solutions, crafting intuitive web apps, or exploring the depths of data science, I thrive on transforming challenges into innovations. So gear up—this journey is a fusion of technology, creativity, and relentless curiosity, where every dataset holds a secret, every project is a new quest, and every bug is just a riddle waiting to be solved!
+              </p>
+            </div>
+            
+            {/* Added Stats/Highlights
+            <div className="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-gray-100">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-700">3+</div>
+                <div className="text-gray-600">Years of Coding</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-700">15+</div>
+                <div className="text-gray-600">Projects</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-teal-700">5+</div>
+                <div className="text-gray-600">Technologies</div>
+              </div>
+            </div> */}
+          </div>
+        </div>
       </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        fill="#3fe9ff"
-        className="invert-svg"
-      >
-        <path
-          fillOpacity={1}
-          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-
-      <style jsx>{`
-        .invert-svg {
-          transform: rotate(180deg);
-        }
-      `}</style>
-    </>
+    </section>
   );
 }

@@ -10,9 +10,9 @@ export default function Logo() {
          
           <div>
             <span className="group text-xl font-black leading-none text-base-900">
-              <span>Himani</span>
+              <span>Himani Bhammar</span>
               <span className="group-hover:text-indigo-500 transition ease-in-out delay-100">
-                ⚡
+                
               </span>
               <span className="text-indigo-600">.</span>
             </span>
